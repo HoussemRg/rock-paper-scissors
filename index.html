@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="title">Welcome</h1>
+        <p class="par">Choose one to play</p>
+        <div class="buttons">
+            <button id="r" onclick="changeBackgroundOfButton('r');palyTheGame('Rock');changeScore();">Rock</button>
+            <button id="p" onclick="changeBackgroundOfButton('p');palyTheGame('Paper');changeScore();">Paper</button>
+            <button id="s" onclick="changeBackgroundOfButton('s');palyTheGame('Scissors');changeScore();">Scissors</button>
+            <button id="res" onclick="
+                score.win=0;
+                score.lose=0;
+                score.draw=0;
+                localStorage.removeItem('score');
+                changeScore();
+                changeBackgroundOfButton('res');
+            "
+            >Reset score</button>
+        </div>
+        <p class="result"></p>
+        <p class="score"></p>
+    </div>
+    <script src="script.js"></script>
+    
+</body>
+</html>
